@@ -3,7 +3,7 @@
  */
 
 import React, {useState, useEffect} from 'react';
-import {View, TouchableOpacity} from 'react-native';
+import {View, Pressable} from 'react-native';
 import CollapseHeader from '../CollapseHeader';
 import CollapseBody from '../CollapseBody';
 
@@ -14,7 +14,6 @@ const Collapse = React.forwardRef(
       disabled = false,
       onToggle = () => undefined,
       handleLongPress = () => undefined,
-      touchableOpacityProps = {},
       children,
       ...restProps
     },
@@ -41,16 +40,14 @@ const Collapse = React.forwardRef(
     } else {
       return (
         <View ref={ref} {...restProps}>
-          <TouchableOpacity
-            {...touchableOpacityProps}
+          <Pressable
             disabled={disabled}
             onPress={() => {
-              onToggle(!show);
-              setShow(!show);
+              onToggle ? onToggle(!show) : setShow(!show);
             }}
             onLongPress={handleLongPress}>
             {header}
-          </TouchableOpacity>
+          </Pressable>
           {show && body}
         </View>
       );
