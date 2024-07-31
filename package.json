@@ -1,6 +1,6 @@
 {
-  "name": "accordion-collapse-react-native",
-  "version": "1.1.1",
+  "name": "accordion-collapse-pressable-react-native",
+  "version": "1.1.2",
   "main": "./build/index.js",
   "keywords": [
     "react",
@@ -23,11 +23,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/marouanekadiri/Accordion-Collapse-react-native"
+    "url": "https://github.com/luismiguel3/Accordion-Collapse-react-native"
   },
   "author": {
-    "name": "Marouane Kadiri",
-    "email": "marouanekadiri@gmail.com"
+    "name": "Luis Miguel Pires",
+    "email": "luismiguelpirescorrea@gmail.com"
   },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
